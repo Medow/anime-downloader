@@ -262,7 +262,7 @@ def format_filename(filename, episode):
     zerosTofill = math.ceil(math.log10(episode._parent._len))
     rep_dict = {
         'anime_title': slugify(episode._parent.title),
-        'ep_no': str(episode.ep_no).zfill(zerosTofill),
+        'ep_no': str(episode.ep_no),
     }
 
     filename = filename.format(**rep_dict)
